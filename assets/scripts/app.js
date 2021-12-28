@@ -15,7 +15,7 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
 function add() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult + enteredNumber;
+    currentResult += enteredNumber;
     //create createAndWriteOutput - operator, resultBeforeCalc, calcNumber
     createAndWriteOutput( '+', initialResult, enteredNumber)
 }
@@ -23,14 +23,14 @@ function add() {
 function sub() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult - enteredNumber;
+    currentResult -= enteredNumber;
     createAndWriteOutput( '-', initialResult, enteredNumber);
 }
 
 function multiply() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult * enteredNumber;
+    currentResult *= enteredNumber;
     createAndWriteOutput( '*', initialResult, enteredNumber);
 }
  
@@ -38,7 +38,7 @@ function multiply() {
 function div() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult / enteredNumber;
+    currentResult /= enteredNumber;
     createAndWriteOutput( '/', initialResult, enteredNumber);
 }
 
