@@ -1,6 +1,10 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
+
+// const inputField = document.getElementById("input-number");
+// const btn = document.getElementById("btn-clear");
+
 //gets input from inout field
 function getUserNumberInput () {
     return parseInt(usrInput.value);
@@ -47,3 +51,7 @@ addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', sub);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', div);
+
+clearBtn.addEventListener('click', () =>{
+    inputField.value = '';
+})
