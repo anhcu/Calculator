@@ -2,8 +2,9 @@ const defaultResult = 0;
 let currentResult = defaultResult;
 
 
-// const inputField = document.getElementById("input-number");
-// const btn = document.getElementById("btn-clear");
+
+
+
 
 //gets input from inout field
 function getUserNumberInput () {
@@ -38,7 +39,6 @@ function multiply() {
     createAndWriteOutput( '*', initialResult, enteredNumber);
 }
  
-
 function div() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
@@ -46,12 +46,25 @@ function div() {
     createAndWriteOutput( '/', initialResult, enteredNumber);
 }
 
+function outputResult(result, text) {
+    currentResultOutput.textContent = result;
+    currentCalculationOutput.textContent = text;
+}  
+
+function clearAll(){
+    inputField.value = '';
+}
+
+function empty(){
+    document.getElementById('click', 'red');
+    // alert('empty');
+}
 
 addBtn.addEventListener('click', add);
 subtractBtn.addEventListener('click', sub);
 multiplyBtn.addEventListener('click', multiply);
 divideBtn.addEventListener('click', div);
+clearBtn.addEventListener('click', clearAll);
+emptyBtn.addEventListener('click',empty);
 
-clearBtn.addEventListener('click', () =>{
-    inputField.value = '';
-})
+
